@@ -1,5 +1,4 @@
 # Flightless
-***
 ![alt text](http://cdn.akamai.steamstatic.com/steam/apps/731770/ss_428e2b8076bd1a1f023c5be94bfedec6177e59fd.1920x1080.jpg?t=1509114152)
 ***
 

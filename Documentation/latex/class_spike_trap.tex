@@ -1,0 +1,80 @@
+\hypertarget{class_spike_trap}{}\section{Spike\+Trap Class Reference}
+\label{class_spike_trap}\index{Spike\+Trap@{Spike\+Trap}}
+
+
+A dangerous block found in the Desert biome.  
+
+
+Inheritance diagram for Spike\+Trap\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_spike_trap}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_spike_trap_aef68a8a783dac108341ca190a4dc0f81}{State}} \{ {\bfseries Dormant} = 0, 
+{\bfseries Charging} = 1, 
+{\bfseries Active} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Possible spike trap behaviors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_spike_trap_ae5f99ac571f8c550780bae8eacef23c0}{Tick}} ()
+\begin{DoxyCompactList}\small\item\em Changes the spike trap\textquotesingle{}s state. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_spike_trap_acedae588051f3999c6c364ae031c9814}{Late\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the spikes have hit an entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A dangerous block found in the Desert biome. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_spike_trap_aef68a8a783dac108341ca190a4dc0f81}\label{class_spike_trap_aef68a8a783dac108341ca190a4dc0f81}} 
+\index{Spike\+Trap@{Spike\+Trap}!State@{State}}
+\index{State@{State}!Spike\+Trap@{Spike\+Trap}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_spike_trap_aef68a8a783dac108341ca190a4dc0f81}{Spike\+Trap.\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Possible spike trap behaviors. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spike_trap_acedae588051f3999c6c364ae031c9814}\label{class_spike_trap_acedae588051f3999c6c364ae031c9814}} 
+\index{Spike\+Trap@{Spike\+Trap}!Late\+Tick@{Late\+Tick}}
+\index{Late\+Tick@{Late\+Tick}!Spike\+Trap@{Spike\+Trap}}
+\subsubsection{\texorpdfstring{Late\+Tick()}{LateTick()}}
+{\footnotesize\ttfamily override void Spike\+Trap.\+Late\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the spikes have hit an entity. 
+
+If the spike trap is charging or active, the entity immideatley above this spike trap is is killed. 
+
+\mbox{\hyperlink{class_entity_af02fade3c492c47394ebd4981de96b1d}{Entity.\+Kill}} 
+
+Reimplemented from \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Entity}}.
+
+\mbox{\Hypertarget{class_spike_trap_ae5f99ac571f8c550780bae8eacef23c0}\label{class_spike_trap_ae5f99ac571f8c550780bae8eacef23c0}} 
+\index{Spike\+Trap@{Spike\+Trap}!Tick@{Tick}}
+\index{Tick@{Tick}!Spike\+Trap@{Spike\+Trap}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Spike\+Trap.\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Changes the spike trap\textquotesingle{}s state. 
+
+If the spike trap loops through the following behaviours, in order\+: dormant, charging, and active. The spike trap is hidden when dormant, somewhat visible when charging, and entirely visible when active. 
+
+Reimplemented from \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Entity}}.
+

@@ -1,0 +1,116 @@
+\hypertarget{class_crate}{}\section{Crate Class Reference}
+\label{class_crate}\index{Crate@{Crate}}
+
+
+A block that can be moved by the player.  
+
+
+Inheritance diagram for Crate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_crate}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_crate_aa8fcf51e527307c91d32173155b53ffb}{speed}} = 40.\+0f
+\begin{DoxyCompactList}\small\item\em The speed at which the crate moves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_crate_a31ad15231807013089177c2c4dc9ac0e}{On\+Mob\+Enter}} (\mbox{\hyperlink{class_mob}{Mob}} mob)
+\begin{DoxyCompactList}\small\item\em Pushes the crate in the same direction as a mob. \end{DoxyCompactList}\item 
+I\+Enumerator \mbox{\hyperlink{class_crate_ada60ced25b7e3edb1fc121a2f1ab6591}{Move}} ()
+\begin{DoxyCompactList}\small\item\em Calls methods involved with this crate\textquotesingle{}s movement \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_crate_a62c69318065c0cd28b018cce05ff279c}{On\+Move\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em Marks that this crate\textquotesingle{}s movement is incomplete. \end{DoxyCompactList}\item 
+I\+Enumerator \mbox{\hyperlink{class_crate_af23a671cf3d73990939b70933e6e7578}{Movement}} ()
+\begin{DoxyCompactList}\small\item\em Gradually moves this crate in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_crate_ad4fe1232707b8bb92c6587bf759d4182}{On\+Move\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Marks that this crate\textquotesingle{}s movement is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A block that can be moved by the player. 
+
+The crate class duplicates code found in the mob class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_crate_ada60ced25b7e3edb1fc121a2f1ab6591}\label{class_crate_ada60ced25b7e3edb1fc121a2f1ab6591}} 
+\index{Crate@{Crate}!Move@{Move}}
+\index{Move@{Move}!Crate@{Crate}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily I\+Enumerator Crate.\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calls methods involved with this crate\textquotesingle{}s movement 
+
+This method is a coroutine, meaning that the On\+Move\+Exit method will not be called until the Movement animation is complete. \mbox{\Hypertarget{class_crate_af23a671cf3d73990939b70933e6e7578}\label{class_crate_af23a671cf3d73990939b70933e6e7578}} 
+\index{Crate@{Crate}!Movement@{Movement}}
+\index{Movement@{Movement}!Crate@{Crate}}
+\subsubsection{\texorpdfstring{Movement()}{Movement()}}
+{\footnotesize\ttfamily I\+Enumerator Crate.\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gradually moves this crate in the specified direction. 
+
+\mbox{\Hypertarget{class_crate_a31ad15231807013089177c2c4dc9ac0e}\label{class_crate_a31ad15231807013089177c2c4dc9ac0e}} 
+\index{Crate@{Crate}!On\+Mob\+Enter@{On\+Mob\+Enter}}
+\index{On\+Mob\+Enter@{On\+Mob\+Enter}!Crate@{Crate}}
+\subsubsection{\texorpdfstring{On\+Mob\+Enter()}{OnMobEnter()}}
+{\footnotesize\ttfamily override void Crate.\+On\+Mob\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mob}{Mob}}}]{mob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Pushes the crate in the same direction as a mob. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mob} & The mob that entered this crate\textquotesingle{}s collider. \\
+\hline
+\end{DoxyParams}
+
+
+If the crate is moving and hits another mob, that mob is killed. 
+
+Reimplemented from \mbox{\hyperlink{class_entity_a92558812563a875ea0e6c3a781ab50bd}{Entity}}.
+
+\mbox{\Hypertarget{class_crate_a62c69318065c0cd28b018cce05ff279c}\label{class_crate_a62c69318065c0cd28b018cce05ff279c}} 
+\index{Crate@{Crate}!On\+Move\+Enter@{On\+Move\+Enter}}
+\index{On\+Move\+Enter@{On\+Move\+Enter}!Crate@{Crate}}
+\subsubsection{\texorpdfstring{On\+Move\+Enter()}{OnMoveEnter()}}
+{\footnotesize\ttfamily virtual void Crate.\+On\+Move\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Marks that this crate\textquotesingle{}s movement is incomplete. 
+
+Sets has\+Ticked to false, indicating that the crate is mid-\/movement. 
+
+\mbox{\hyperlink{class_entity_a5c863af2a4933e264e30be69644c749e}{Entity.\+has\+Ticked}} \mbox{\Hypertarget{class_crate_ad4fe1232707b8bb92c6587bf759d4182}\label{class_crate_ad4fe1232707b8bb92c6587bf759d4182}} 
+\index{Crate@{Crate}!On\+Move\+Exit@{On\+Move\+Exit}}
+\index{On\+Move\+Exit@{On\+Move\+Exit}!Crate@{Crate}}
+\subsubsection{\texorpdfstring{On\+Move\+Exit()}{OnMoveExit()}}
+{\footnotesize\ttfamily void Crate.\+On\+Move\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Marks that this crate\textquotesingle{}s movement is complete. 
+
+If this crate is moved such that it lands on ice, the crate will continue to move in the designated direction. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_crate_aa8fcf51e527307c91d32173155b53ffb}\label{class_crate_aa8fcf51e527307c91d32173155b53ffb}} 
+\index{Crate@{Crate}!speed@{speed}}
+\index{speed@{speed}!Crate@{Crate}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Crate.\+speed = 40.\+0f}
+
+
+
+The speed at which the crate moves. 
+

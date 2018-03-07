@@ -1,0 +1,71 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+The character that the player controls.  
+
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_player_a10405c2b24c0b79a4b7033f733aceaf4}{On\+Move\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Marks that this crate\textquotesingle{}s movement is complete. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_ae7c1a20db6171c3062e9dde30ea86048}{is\+Sliding}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if and only if this crate should slide. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a3f36261a8b0622c04942d54e609da6e4}{is\+Stuck}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if and only the player cannot legally move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The character that the player controls. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_ae7c1a20db6171c3062e9dde30ea86048}\label{class_player_ae7c1a20db6171c3062e9dde30ea86048}} 
+\index{Player@{Player}!is\+Sliding@{is\+Sliding}}
+\index{is\+Sliding@{is\+Sliding}!Player@{Player}}
+\subsubsection{\texorpdfstring{is\+Sliding()}{isSliding()}}
+{\footnotesize\ttfamily bool Player.\+is\+Sliding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns true if and only if this crate should slide. 
+
+\begin{DoxyReturn}{Returns}
+True if and only if this crate should slide. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a3f36261a8b0622c04942d54e609da6e4}\label{class_player_a3f36261a8b0622c04942d54e609da6e4}} 
+\index{Player@{Player}!is\+Stuck@{is\+Stuck}}
+\index{is\+Stuck@{is\+Stuck}!Player@{Player}}
+\subsubsection{\texorpdfstring{is\+Stuck()}{isStuck()}}
+{\footnotesize\ttfamily bool Player.\+is\+Stuck (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Returns true if and only the player cannot legally move. 
+
+\begin{DoxyReturn}{Returns}
+True if and only the player cannot legally move. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a10405c2b24c0b79a4b7033f733aceaf4}\label{class_player_a10405c2b24c0b79a4b7033f733aceaf4}} 
+\index{Player@{Player}!On\+Move\+Exit@{On\+Move\+Exit}}
+\index{On\+Move\+Exit@{On\+Move\+Exit}!Player@{Player}}
+\subsubsection{\texorpdfstring{On\+Move\+Exit()}{OnMoveExit()}}
+{\footnotesize\ttfamily override void Player.\+On\+Move\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Marks that this crate\textquotesingle{}s movement is complete. 
+
+If the player moves onto ice, the player will continue to move until he or she is no longer on ice. 
+
+Reimplemented from \mbox{\hyperlink{class_mob_aa523ff737b0324ec092670280d528c58}{Mob}}.
+

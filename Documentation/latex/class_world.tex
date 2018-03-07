@@ -1,0 +1,56 @@
+\hypertarget{class_world}{}\section{World Class Reference}
+\label{class_world}\index{World@{World}}
+
+
+A component that stores all of the entities in a level  
+
+
+Inheritance diagram for World\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_world}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_entity}{Entity}} \mbox{\hyperlink{class_world_a6329d86f62ec9cf32fed26a74f68e878}{Get}} (Vector3 coordinates)
+\begin{DoxyCompactList}\small\item\em Retrieves the entity located at the given coordinates. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_world_aafe2420b96ed8e71db9837b1517d093c}{Recalculate}} ()
+\begin{DoxyCompactList}\small\item\em Populates the matrix with entities and fills any nullspace with air. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A component that stores all of the entities in a level 
+
+The \mbox{\hyperlink{class_world}{World}} class implements methods that store and retrieve game objects. All active entities in a scene are stored in the \mbox{\hyperlink{class_world}{World}}\textquotesingle{}s entity matrix. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_world_a6329d86f62ec9cf32fed26a74f68e878}\label{class_world_a6329d86f62ec9cf32fed26a74f68e878}} 
+\index{World@{World}!Get@{Get}}
+\index{Get@{Get}!World@{World}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_entity}{Entity}} World.\+Get (\begin{DoxyParamCaption}\item[{Vector3}]{coordinates }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Retrieves the entity located at the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordinates} & The matrix coordinates of an entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The entity stored at the given coordinates. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_world_aafe2420b96ed8e71db9837b1517d093c}\label{class_world_aafe2420b96ed8e71db9837b1517d093c}} 
+\index{World@{World}!Recalculate@{Recalculate}}
+\index{Recalculate@{Recalculate}!World@{World}}
+\subsubsection{\texorpdfstring{Recalculate()}{Recalculate()}}
+{\footnotesize\ttfamily static void World.\+Recalculate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Populates the matrix with entities and fills any nullspace with air. 
+

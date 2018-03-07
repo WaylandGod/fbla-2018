@@ -1,0 +1,126 @@
+\hypertarget{class_mob}{}\section{Mob Class Reference}
+\label{class_mob}\index{Mob@{Mob}}
+
+
+The parent class of all mobs.  
+
+
+Inheritance diagram for Mob\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_mob}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_mob_ae3126d5dea1c7abcbde5a73de0c1a791}{speed}} = 25f
+\begin{DoxyCompactList}\small\item\em The speed at which the mob moves. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_mob_a9e4730b2cbbb1230028177caf997a70e}{direction}}
+\begin{DoxyCompactList}\small\item\em The direction that the crate is moving. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+I\+Enumerator \mbox{\hyperlink{class_mob_aca6588515e7a5daa0e1c8f274c37e46f}{Move}} ()
+\begin{DoxyCompactList}\small\item\em Calls methods involved with this mob\textquotesingle{}s movement \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mob_afe18435e81a113484d2b38a6c91eba1a}{On\+Move\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em Marks that this mob\textquotesingle{}s movement is incomplete. \end{DoxyCompactList}\item 
+I\+Enumerator \mbox{\hyperlink{class_mob_a3eb78b08b3605ddc4b37395b18437c7d}{Movement}} ()
+\begin{DoxyCompactList}\small\item\em Gradually moves this mob in the specified direction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mob_aa523ff737b0324ec092670280d528c58}{On\+Move\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Marks that this crate\textquotesingle{}s movement is complete. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_mob_a9f08167514165ff0aa3683091db87133}{Move\+Is\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em Checks if this mob can move in the given direction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The parent class of all mobs. 
+
+Mobs can move and are often dangerous to the player. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mob_aca6588515e7a5daa0e1c8f274c37e46f}\label{class_mob_aca6588515e7a5daa0e1c8f274c37e46f}} 
+\index{Mob@{Mob}!Move@{Move}}
+\index{Move@{Move}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily I\+Enumerator Mob.\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calls methods involved with this mob\textquotesingle{}s movement 
+
+\mbox{\Hypertarget{class_mob_a9f08167514165ff0aa3683091db87133}\label{class_mob_a9f08167514165ff0aa3683091db87133}} 
+\index{Mob@{Mob}!Move\+Is\+Valid@{Move\+Is\+Valid}}
+\index{Move\+Is\+Valid@{Move\+Is\+Valid}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{Move\+Is\+Valid()}{MoveIsValid()}}
+{\footnotesize\ttfamily virtual bool Mob.\+Move\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Checks if this mob can move in the given direction. 
+
+This method checks three conditions\+: one, that there\textquotesingle{}s nothing obstructing this mob\textquotesingle{}s movement; two, that the block ahead can be stepped on; and three, that the mob is not moving diagonally. 
+
+\begin{DoxyReturn}{Returns}
+True if and only if a move is valid. \mbox{\hyperlink{class_mob_a9e4730b2cbbb1230028177caf997a70e}{direction}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mob_a3eb78b08b3605ddc4b37395b18437c7d}\label{class_mob_a3eb78b08b3605ddc4b37395b18437c7d}} 
+\index{Mob@{Mob}!Movement@{Movement}}
+\index{Movement@{Movement}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{Movement()}{Movement()}}
+{\footnotesize\ttfamily I\+Enumerator Mob.\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Gradually moves this mob in the specified direction. 
+
+\mbox{\Hypertarget{class_mob_afe18435e81a113484d2b38a6c91eba1a}\label{class_mob_afe18435e81a113484d2b38a6c91eba1a}} 
+\index{Mob@{Mob}!On\+Move\+Enter@{On\+Move\+Enter}}
+\index{On\+Move\+Enter@{On\+Move\+Enter}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{On\+Move\+Enter()}{OnMoveEnter()}}
+{\footnotesize\ttfamily virtual void Mob.\+On\+Move\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Marks that this mob\textquotesingle{}s movement is incomplete. 
+
+Sets has\+Ticked to false, indicating that this mob is mid-\/movement. 
+
+\mbox{\hyperlink{class_entity_a5c863af2a4933e264e30be69644c749e}{Entity.\+has\+Ticked}} \mbox{\Hypertarget{class_mob_aa523ff737b0324ec092670280d528c58}\label{class_mob_aa523ff737b0324ec092670280d528c58}} 
+\index{Mob@{Mob}!On\+Move\+Exit@{On\+Move\+Exit}}
+\index{On\+Move\+Exit@{On\+Move\+Exit}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{On\+Move\+Exit()}{OnMoveExit()}}
+{\footnotesize\ttfamily virtual void Mob.\+On\+Move\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Marks that this crate\textquotesingle{}s movement is complete. 
+
+The position of all non-\/static entities is recalculated when a mob stops moving. 
+
+Reimplemented in \mbox{\hyperlink{class_player_a10405c2b24c0b79a4b7033f733aceaf4}{Player}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mob_a9e4730b2cbbb1230028177caf997a70e}\label{class_mob_a9e4730b2cbbb1230028177caf997a70e}} 
+\index{Mob@{Mob}!direction@{direction}}
+\index{direction@{direction}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily Vector3 Mob.\+direction}
+
+
+
+The direction that the crate is moving. 
+
+The default value is the zero-\/vector. \mbox{\Hypertarget{class_mob_ae3126d5dea1c7abcbde5a73de0c1a791}\label{class_mob_ae3126d5dea1c7abcbde5a73de0c1a791}} 
+\index{Mob@{Mob}!speed@{speed}}
+\index{speed@{speed}!Mob@{Mob}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Mob.\+speed = 25f}
+
+
+
+The speed at which the mob moves. 
+

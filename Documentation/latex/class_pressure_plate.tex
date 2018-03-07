@@ -1,0 +1,100 @@
+\hypertarget{class_pressure_plate}{}\section{Pressure\+Plate Class Reference}
+\label{class_pressure_plate}\index{Pressure\+Plate@{Pressure\+Plate}}
+
+
+This class is deprecated, and will be refactored in the next version.  
+
+
+Inheritance diagram for Pressure\+Plate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_pressure_plate}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a39c3f9c6069e590e7bad66bf7d4761be}\label{class_pressure_plate_a39c3f9c6069e590e7bad66bf7d4761be}} 
+enum {\bfseries Action} \{ {\bfseries Summon}, 
+{\bfseries Reset}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pressure_plate_a38ab73177e6bef277e62247d7f5fe2f8}{Tick}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when the player starts moving. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a6302d6e94bcbbd31fa55d0bca006ffa5}\label{class_pressure_plate_a6302d6e94bcbbd31fa55d0bca006ffa5}} 
+Action {\bfseries action}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_aead725b8d1478d5267fde196672bb597}\label{class_pressure_plate_aead725b8d1478d5267fde196672bb597}} 
+Game\+Object {\bfseries go}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a982e3da6624dcf693847ba3b39a30f8a}\label{class_pressure_plate_a982e3da6624dcf693847ba3b39a30f8a}} 
+Vector3 {\bfseries position}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a5003ad0f7a2689312dad2a0627159fa5}\label{class_pressure_plate_a5003ad0f7a2689312dad2a0627159fa5}} 
+Game\+Object {\bfseries summon}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a59ec5355f5fc1f4524c2aae0722a919e}\label{class_pressure_plate_a59ec5355f5fc1f4524c2aae0722a919e}} 
+Vector3 {\bfseries direction} = new Vector3 (0,0,0)
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a6db48f1e01aa9d689e3f4fe2602fce1c}\label{class_pressure_plate_a6db48f1e01aa9d689e3f4fe2602fce1c}} 
+int {\bfseries turns} = 1
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a90894937e168bf3b9780be0d9a4aa11b}\label{class_pressure_plate_a90894937e168bf3b9780be0d9a4aa11b}} 
+Game\+Object {\bfseries model}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_ae1dbd6e5d02d4be800b45f320a592b76}\label{class_pressure_plate_ae1dbd6e5d02d4be800b45f320a592b76}} 
+Material {\bfseries first}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a7371406aa95f86f24a88a48bbb2a6a2b}\label{class_pressure_plate_a7371406aa95f86f24a88a48bbb2a6a2b}} 
+Material {\bfseries second}
+\item 
+\mbox{\Hypertarget{class_pressure_plate_a8bfd1f62ab738ccfc8f57bafb6c5c1fd}\label{class_pressure_plate_a8bfd1f62ab738ccfc8f57bafb6c5c1fd}} 
+Game\+Object {\bfseries cube}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_pressure_plate_a859fa0ce4d9dcfdcc702593ae98afbb0}{On\+Player\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity enters the player\textquotesingle{}s collider. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is deprecated, and will be refactored in the next version. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pressure_plate_a859fa0ce4d9dcfdcc702593ae98afbb0}\label{class_pressure_plate_a859fa0ce4d9dcfdcc702593ae98afbb0}} 
+\index{Pressure\+Plate@{Pressure\+Plate}!On\+Player\+Enter@{On\+Player\+Enter}}
+\index{On\+Player\+Enter@{On\+Player\+Enter}!Pressure\+Plate@{Pressure\+Plate}}
+\subsubsection{\texorpdfstring{On\+Player\+Enter()}{OnPlayerEnter()}}
+{\footnotesize\ttfamily override void Pressure\+Plate.\+On\+Player\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity enters the player\textquotesingle{}s collider. 
+
+This method is also called when the player enters this entity\textquotesingle{}s collider. 
+
+Reimplemented from \mbox{\hyperlink{class_entity_ad1e2bb09e463c33b64b26ba3306ba2d7}{Entity}}.
+
+\mbox{\Hypertarget{class_pressure_plate_a38ab73177e6bef277e62247d7f5fe2f8}\label{class_pressure_plate_a38ab73177e6bef277e62247d7f5fe2f8}} 
+\index{Pressure\+Plate@{Pressure\+Plate}!Tick@{Tick}}
+\index{Tick@{Tick}!Pressure\+Plate@{Pressure\+Plate}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily override void Pressure\+Plate.\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when the player starts moving. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Entity}}.
+

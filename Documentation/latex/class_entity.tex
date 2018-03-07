@@ -1,0 +1,300 @@
+\hypertarget{class_entity}{}\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+
+
+The parent class of all game objects.  
+
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Tick}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when the player starts moving. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Late\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when the player stops moving. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a6039178e15537a356d8fde707c9e0b69}{On\+Death}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when an entity is killed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_entity_a392e02c7155fc0b9a0fd344b7c01c025}{is\+Intangible}} = false
+\begin{DoxyCompactList}\small\item\em True only if the player can move through this entity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_entity_ae1d1e0c619e8f41d50d948b5f2c2cefd}{is\+Destructible}} = false
+\begin{DoxyCompactList}\small\item\em True if and only if this entity can be destroyed. \end{DoxyCompactList}\item 
+Vector3 \mbox{\hyperlink{class_entity_af07da28c7ac110de4e22283ffb86380a}{coordinates}} = Vector3.\+zero
+\begin{DoxyCompactList}\small\item\em This entity\textquotesingle{}s position in the \mbox{\hyperlink{class_world}{World}} matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_entity_a5c863af2a4933e264e30be69644c749e}{has\+Ticked}} = true
+\begin{DoxyCompactList}\small\item\em True if and only if this entity\textquotesingle{}s \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Tick()}} and \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Late\+Tick()}} methods have executed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_entity_aafcac2c050f5043481675c18490efe51}{is\+Enabled}} = true
+\begin{DoxyCompactList}\small\item\em True if and only if this entity\textquotesingle{}s \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Tick()}} and \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Late\+Tick()}} methods are allowed to execute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_entity_ad1e2bb09e463c33b64b26ba3306ba2d7}{On\+Player\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity enters the player\textquotesingle{}s collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a32971771be20c0e99a202911b6f311b3}{On\+Player\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity exits the player\textquotesingle{}s collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a92558812563a875ea0e6c3a781ab50bd}{On\+Mob\+Enter}} (\mbox{\hyperlink{class_mob}{Mob}} mob)
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity enters a mob\textquotesingle{}s collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a6d53fa0672b1a366c8e7defd2e4503a6}{On\+Mob\+Exit}} (\mbox{\hyperlink{class_mob}{Mob}} mob)
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity exits a mob\textquotesingle{}s collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a8c0a0d1bbee6bf816ff122f2ddfd8820}{On\+Block\+Enter}} (\mbox{\hyperlink{class_block}{Block}} block)
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity enters a block\textquotesingle{}s collider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a7d7bec05bad5f327b3265d3514948a5e}{On\+Block\+Exit}} (\mbox{\hyperlink{class_block}{Block}} block)
+\begin{DoxyCompactList}\small\item\em An overridable method that is called when this entity exits a block\textquotesingle{}s collider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_ad869135bb5e08171e05904f728eed062}{On\+Trigger\+Enter}} (Collider collider)
+\begin{DoxyCompactList}\small\item\em Calls collision-\/related methods. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a430f39e3987d6ae36bd62ed78f02fa2c}{On\+Trigger\+Exit}} (Collider collider)
+\begin{DoxyCompactList}\small\item\em Calls collision-\/related methods. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_af02fade3c492c47394ebd4981de96b1d}{Kill}} (\mbox{\hyperlink{class_entity}{Entity}} entity)
+\begin{DoxyCompactList}\small\item\em Calls the On\+Death method of an entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The parent class of all game objects. 
+
+Entities are the most basic form of a game object; blocks, items, and mobs all derive from \mbox{\hyperlink{class_entity}{Entity}}. This class defines behaviors that are common across all entities. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_af02fade3c492c47394ebd4981de96b1d}\label{class_entity_af02fade3c492c47394ebd4981de96b1d}} 
+\index{Entity@{Entity}!Kill@{Kill}}
+\index{Kill@{Kill}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily virtual void Entity.\+Kill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}}}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Calls the On\+Death method of an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The entity that will be killed. \\
+\hline
+\end{DoxyParams}
+\mbox{\hyperlink{class_entity_a6039178e15537a356d8fde707c9e0b69}{Entity.\+On\+Death}} \mbox{\Hypertarget{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}\label{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}} 
+\index{Entity@{Entity}!Late\+Tick@{Late\+Tick}}
+\index{Late\+Tick@{Late\+Tick}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Late\+Tick()}{LateTick()}}
+{\footnotesize\ttfamily virtual void Entity.\+Late\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when the player stops moving. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_spike_trap_acedae588051f3999c6c364ae031c9814}{Spike\+Trap}}, and \mbox{\hyperlink{class_patroller_a72fbde4c18c8b857a43e63ed5b830f53}{Patroller}}.
+
+\mbox{\Hypertarget{class_entity_a8c0a0d1bbee6bf816ff122f2ddfd8820}\label{class_entity_a8c0a0d1bbee6bf816ff122f2ddfd8820}} 
+\index{Entity@{Entity}!On\+Block\+Enter@{On\+Block\+Enter}}
+\index{On\+Block\+Enter@{On\+Block\+Enter}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Block\+Enter()}{OnBlockEnter()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Block\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity enters a block\textquotesingle{}s collider. 
+
+This method is also called when a block enters this entity\textquotesingle{}s collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mob} & The block that entered this entity\textquotesingle{}s collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_entity_a7d7bec05bad5f327b3265d3514948a5e}\label{class_entity_a7d7bec05bad5f327b3265d3514948a5e}} 
+\index{Entity@{Entity}!On\+Block\+Exit@{On\+Block\+Exit}}
+\index{On\+Block\+Exit@{On\+Block\+Exit}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Block\+Exit()}{OnBlockExit()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Block\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_block}{Block}}}]{block }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity exits a block\textquotesingle{}s collider. 
+
+This method is also called when a block exits this entity\textquotesingle{}s collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mob} & The block that exited this entity\textquotesingle{}s collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_entity_a6039178e15537a356d8fde707c9e0b69}\label{class_entity_a6039178e15537a356d8fde707c9e0b69}} 
+\index{Entity@{Entity}!On\+Death@{On\+Death}}
+\index{On\+Death@{On\+Death}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Death()}{OnDeath()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Death (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when an entity is killed. 
+
+\mbox{\hyperlink{class_entity_af02fade3c492c47394ebd4981de96b1d}{Entity.\+Kill}} \mbox{\Hypertarget{class_entity_a92558812563a875ea0e6c3a781ab50bd}\label{class_entity_a92558812563a875ea0e6c3a781ab50bd}} 
+\index{Entity@{Entity}!On\+Mob\+Enter@{On\+Mob\+Enter}}
+\index{On\+Mob\+Enter@{On\+Mob\+Enter}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Mob\+Enter()}{OnMobEnter()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Mob\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mob}{Mob}}}]{mob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity enters a mob\textquotesingle{}s collider. 
+
+This method is also called when a mob enters this entity\textquotesingle{}s collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mob} & The mob that entered this entity\textquotesingle{}s collider \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_crate_a31ad15231807013089177c2c4dc9ac0e}{Crate}}.
+
+\mbox{\Hypertarget{class_entity_a6d53fa0672b1a366c8e7defd2e4503a6}\label{class_entity_a6d53fa0672b1a366c8e7defd2e4503a6}} 
+\index{Entity@{Entity}!On\+Mob\+Exit@{On\+Mob\+Exit}}
+\index{On\+Mob\+Exit@{On\+Mob\+Exit}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Mob\+Exit()}{OnMobExit()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Mob\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mob}{Mob}}}]{mob }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity exits a mob\textquotesingle{}s collider. 
+
+This method is also called when a mob exits this entity\textquotesingle{}s collider. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mob} & The mob that exited this entity\textquotesingle{}s collider \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_entity_ad1e2bb09e463c33b64b26ba3306ba2d7}\label{class_entity_ad1e2bb09e463c33b64b26ba3306ba2d7}} 
+\index{Entity@{Entity}!On\+Player\+Enter@{On\+Player\+Enter}}
+\index{On\+Player\+Enter@{On\+Player\+Enter}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Player\+Enter()}{OnPlayerEnter()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Player\+Enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity enters the player\textquotesingle{}s collider. 
+
+This method is also called when the player enters this entity\textquotesingle{}s collider. 
+
+Reimplemented in \mbox{\hyperlink{class_pressure_plate_a859fa0ce4d9dcfdcc702593ae98afbb0}{Pressure\+Plate}}, \mbox{\hyperlink{class_item_a81c3deb2aa480e2759a9193822d4b7e8}{Item}}, and \mbox{\hyperlink{class_thin_ice_ab8e8cabf76700da05418fa3586b54f4c}{Thin\+Ice}}.
+
+\mbox{\Hypertarget{class_entity_a32971771be20c0e99a202911b6f311b3}\label{class_entity_a32971771be20c0e99a202911b6f311b3}} 
+\index{Entity@{Entity}!On\+Player\+Exit@{On\+Player\+Exit}}
+\index{On\+Player\+Exit@{On\+Player\+Exit}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Player\+Exit()}{OnPlayerExit()}}
+{\footnotesize\ttfamily virtual void Entity.\+On\+Player\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when this entity exits the player\textquotesingle{}s collider. 
+
+This method is also called when the player exits this entity\textquotesingle{}s collider. \mbox{\Hypertarget{class_entity_ad869135bb5e08171e05904f728eed062}\label{class_entity_ad869135bb5e08171e05904f728eed062}} 
+\index{Entity@{Entity}!On\+Trigger\+Enter@{On\+Trigger\+Enter}}
+\index{On\+Trigger\+Enter@{On\+Trigger\+Enter}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Trigger\+Enter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily void Entity.\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{collider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calls collision-\/related methods. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider} & An entity\textquotesingle{}s collider \\
+\hline
+\end{DoxyParams}
+
+
+This method is called when this entity\textquotesingle{}s collider enters any collider. \mbox{\Hypertarget{class_entity_a430f39e3987d6ae36bd62ed78f02fa2c}\label{class_entity_a430f39e3987d6ae36bd62ed78f02fa2c}} 
+\index{Entity@{Entity}!On\+Trigger\+Exit@{On\+Trigger\+Exit}}
+\index{On\+Trigger\+Exit@{On\+Trigger\+Exit}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{On\+Trigger\+Exit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily void Entity.\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{collider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Calls collision-\/related methods. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collider} & An entity\textquotesingle{}s collider \\
+\hline
+\end{DoxyParams}
+
+
+This method is called when this entity\textquotesingle{}s collider exits any collider. \mbox{\Hypertarget{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}\label{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}} 
+\index{Entity@{Entity}!Tick@{Tick}}
+\index{Tick@{Tick}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{Tick()}{Tick()}}
+{\footnotesize\ttfamily virtual void Entity.\+Tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+An overridable method that is called when the player starts moving. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_pressure_plate_a38ab73177e6bef277e62247d7f5fe2f8}{Pressure\+Plate}}, and \mbox{\hyperlink{class_spike_trap_ae5f99ac571f8c550780bae8eacef23c0}{Spike\+Trap}}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_entity_af07da28c7ac110de4e22283ffb86380a}\label{class_entity_af07da28c7ac110de4e22283ffb86380a}} 
+\index{Entity@{Entity}!coordinates@{coordinates}}
+\index{coordinates@{coordinates}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{coordinates}{coordinates}}
+{\footnotesize\ttfamily Vector3 Entity.\+coordinates = Vector3.\+zero}
+
+
+
+This entity\textquotesingle{}s position in the \mbox{\hyperlink{class_world}{World}} matrix. 
+
+\mbox{\hyperlink{class_world_aafe2420b96ed8e71db9837b1517d093c}{World.\+Recalculate}} \mbox{\Hypertarget{class_entity_a5c863af2a4933e264e30be69644c749e}\label{class_entity_a5c863af2a4933e264e30be69644c749e}} 
+\index{Entity@{Entity}!has\+Ticked@{has\+Ticked}}
+\index{has\+Ticked@{has\+Ticked}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{has\+Ticked}{hasTicked}}
+{\footnotesize\ttfamily bool Entity.\+has\+Ticked = true}
+
+
+
+True if and only if this entity\textquotesingle{}s \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Tick()}} and \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Late\+Tick()}} methods have executed. 
+
+\mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Entity.\+Tick}} \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Entity.\+Late\+Tick}} \mbox{\Hypertarget{class_entity_ae1d1e0c619e8f41d50d948b5f2c2cefd}\label{class_entity_ae1d1e0c619e8f41d50d948b5f2c2cefd}} 
+\index{Entity@{Entity}!is\+Destructible@{is\+Destructible}}
+\index{is\+Destructible@{is\+Destructible}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{is\+Destructible}{isDestructible}}
+{\footnotesize\ttfamily bool Entity.\+is\+Destructible = false}
+
+
+
+True if and only if this entity can be destroyed. 
+
+\mbox{\hyperlink{class_entity_af02fade3c492c47394ebd4981de96b1d}{Entity.\+Kill}} \mbox{\Hypertarget{class_entity_aafcac2c050f5043481675c18490efe51}\label{class_entity_aafcac2c050f5043481675c18490efe51}} 
+\index{Entity@{Entity}!is\+Enabled@{is\+Enabled}}
+\index{is\+Enabled@{is\+Enabled}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{is\+Enabled}{isEnabled}}
+{\footnotesize\ttfamily bool Entity.\+is\+Enabled = true}
+
+
+
+True if and only if this entity\textquotesingle{}s \mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Tick()}} and \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Late\+Tick()}} methods are allowed to execute. 
+
+\mbox{\hyperlink{class_entity_a7a09da64c6d87cd1bce0bb69512d82fc}{Entity.\+Tick}} \mbox{\hyperlink{class_entity_a80e2936e1d8d8590dc183b2980fcd3c9}{Entity.\+Late\+Tick}} \mbox{\Hypertarget{class_entity_a392e02c7155fc0b9a0fd344b7c01c025}\label{class_entity_a392e02c7155fc0b9a0fd344b7c01c025}} 
+\index{Entity@{Entity}!is\+Intangible@{is\+Intangible}}
+\index{is\+Intangible@{is\+Intangible}!Entity@{Entity}}
+\subsubsection{\texorpdfstring{is\+Intangible}{isIntangible}}
+{\footnotesize\ttfamily bool Entity.\+is\+Intangible = false}
+
+
+
+True only if the player can move through this entity. 
+
